@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}
+   Welcome!
+{% endblock %}
+
+{% block body %}
+<body style="background-color: lavenderblush"> <body>
+
+<h1 style="font-family:fantasy"><font color="plum">Hanyang Delivery App</font></h1>
+<h2 style="font-family:cursive"><font color="plum">Welcome</font></h2>
+<h2 style="font-family:cursive"style="font-size:xx-small"><font color="silver">login</font></h2>
+
+
+<form action="/login" method="POST">
+<input type= 'text' name="local" placeholder="username">
+<input type="password" name="passwd" placeholder="password">
+<input type="submit" value="login">
+</form>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+   
+    <a href="{{ url_for('seller') }}">Check out this cool form!</a>
+   
+</script>
+{% endblock %}

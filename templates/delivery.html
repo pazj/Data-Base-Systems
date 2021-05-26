@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}
+{{ delivery_data['did']}}
+{% endblock %}
+
+{% block body %}
+<h1>HANYANG DELIVERY APP</h1>
+<h2>Welcome{{ delivery_data['name']}}님!</h2>
+<table>
+    <tr>
+        {% for item in delivery_data %}
+        <td>{{ item ['name']}} </td>
+        {% endfor %}
+    </tr>
+</table>
+<div>
+    <h3>Delivery</h3>
+    <ul>
+        <li>
+            <a href="'/{{ delivery_data[]}}/delivery.csv'"></a>
+        </li>
+    </ul>
+</div>
+<!--input type="submit" value="login"-->
+{% endblock %}

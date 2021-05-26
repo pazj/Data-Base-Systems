@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}
+{{ customer_data['name']}}
+{% endblock %}
+
+{% block body %}
+<h1>HANYANG DELIVERY APP</h1>
+<h2>Welcome{{ customer_data['name']}}님!</h2>
+<table>
+    <tr>
+        {% for item in customer_data %}
+        <td>{{ item }} </td>
+        {% endfor %}
+    </tr>
+</table>
+<div>
+    <h3>customer</h3>
+    <ul>
+        <li>
+            <!--a href="'/{{ customer_data[]}}/duke'"></a-->
+        </li>
+        <li>
+            <a href='/{{ customer_data["sid"] }}/customer'>User Info</a>
+        </li>
+        <li>
+            <a href='/{{ customer_data["sid"] }}/customer'>Placing an Order</a>
+        </li>
+        <li>
+            <a href='/{{ customer_data["sid"] }}/customer'>Order History</a>
+        </li>
+        <li>
+            <a href='/{{ customer_data["sid"] }}/customer'>Store1</a>
+        </li>
+        <li>
+            <a href='/{{ customer_data["sid"] }}/customer'>Store2</a>
+        </li>
+        <li>
+            <a href='/{{ customer_data["sid"] }}/customer'>Store3</a>
+        </li>
+    </ul>
+</div>
+<!--input type="submit" value="login"-->
+{% endblock %}

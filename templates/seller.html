@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}
+{{ seller_data['name']}}
+{% endblock %}
+
+{% block body %}
+<h1>HANYANG DELIVERY APP</h1>
+<!--h2>Welcome{{ seller_data['name'] }}님!</h2-->
+<table>
+    
+    <tr>
+        {% for item in seller_data %}
+        <td>{{ item }} </td>
+        {% endfor %}
+    </tr>
+</table>
+<div>
+    <h3>SERVICES</h3>
+    <ul>
+        <li>
+            <a href='/{{ seller_data["sid"] }}/store'>Store1</a>
+        </li>
+        <li>
+            <a  href='/{{ seller_data["sid"] }}/menue'>Store2</a>
+        </li>
+        <li>
+                <a  href='/{{ seller_data["sid"] }}/order'>Store3</a>
+        </li>
+    </ul>
+</div>
+<!--input type="submit" value="login"-->
+{% endblock %}
